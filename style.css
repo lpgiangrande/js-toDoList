@@ -1,0 +1,92 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5vw; /* 5% de la largeur d'écran*/
+    margin: 50px 0;
+}
+
+form {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 1200px;
+    min-width: 400px;
+}
+
+form label {
+    display: block;
+    font-size: 15px;
+}
+ 
+form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+form button {
+    padding: 15px;
+    font-size: 20px;
+}
+
+.list-todo {
+    list-style-type: none;
+    margin: 30px auto 0;
+    /* Mêmes données que form */
+    width: 70%;
+    max-width: 1200px;
+    min-width: 400px;
+}
+
+li {
+    font-size: 20px;
+    width: 70%;
+    margin: 20px auto;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: #333;
+    
+}
+
+li input {
+    width: 40px;
+    height: 40px; 
+    margin-left: 15px;
+}
+
+li button {
+    margin-left: auto;
+    padding: 5px;
+}
+
+button img {
+    width: 40px;
+    pointer-events: none; 
+    /*ignore l'image avec le curseur de la souris. Permet la suppression d'une tâche sinon blocage*/
+    /* car sinon on clic sur l'image, mais PAS SUR LE BOUTON, donc la fonction ne s'éxecute pas */
+}
+
+li span {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+/* Animation rayures*/
+li.finDeTache span {
+    text-decoration: line-through;
+}
+
